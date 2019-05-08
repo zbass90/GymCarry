@@ -1,0 +1,112 @@
+@charset "UTF-8";
+body{
+	margin:0
+}
+header{
+	background-image:url('/gymcarry/resources/user/email-background.jpg');
+	background-repeat:no-repeat;
+	height:100%;
+	background-position:center;
+	background-size:cover;
+	background-blend-mode: luminosity; /*여기서 조절*/
+	background-color: #A9A9A9;
+}
+.paper{
+	margin-top:-150px;
+	padding:40px;
+	background-color: white;
+	width:100%;
+	height:750px;
+	border-radius:5px;
+	box-shadow:10px 10px #BDBDBD;
+}
+.form-input-tel{	
+	width:100%;	
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0;
+}
+.form-input-tel-in{		
+	width:65%;
+    border: 0 none;
+    border-radius: 0;
+    background: none;    
+    -webkit-appearance: none;
+    height: 45px;    
+    padding: 0;
+}
+.form-input-tel-in:focus{
+	outline:0;	
+}
+
+.form-input-tel:hover{
+	border-bottom: 2px solid #888;
+	transition:0.1s;
+}
+.form-input-tel button{
+	position:absolute;
+	margin-top:7px;
+	right:10px;
+	border: 1px solid #89283e;
+	background: rgba(255,255,255,0.9);
+	color: #89283e;
+	font-size: 14px;
+	font-family:'Jua', sans-serif;
+	padding:6px 10px;
+	font-weight:600;
+	border-radius: 2px;
+}
+.form-input{
+	width:100%;
+    border: 0 none;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    background: none;
+    font-size: 15px;
+    font-weight: 400;
+    height: 45px;
+    padding: 0;
+    -webkit-appearance: none;
+}
+.form-input:focus{
+	outline:0;		
+	box-shadow:none;	
+	border-bottom: 3px solid #888;
+}
+.form-input:hover{
+	border-bottom: 2px solid #888;
+	transition:0.1s;
+}
+.form-strong-fnt{
+	color:#89283e;
+	font-family:'Jua', sans-serif;	
+}
+.paper-top{
+	line-height:20px;
+}
+.paper-top strong{
+	font-size:18px
+}
+.paper-top span{
+	font-size:20px
+}
+.paper-fnt{
+	font-size:20px
+}
+.form-frm{
+	margin-top:20px
+}
+.form-input{
+	margin-bottom:20px
+}
+.paper-bottom{
+	font-size:15px;
+	text-align:center;
+}
+.paper-bottom-1{
+	margin-top: 30px
+}
+.paper-bottom-2{
+	margin-top: 30px;
+}

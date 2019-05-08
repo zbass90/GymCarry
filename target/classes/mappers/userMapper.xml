@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+<mapper namespace="user">
+	<select id="userList" resultType="userDto">
+		select * from usertbl
+		order by userid
+	</select>	
+	<select id="login_check" resultType="userDto" parameterType="userDto">
+		select userid, username from userTbl
+		where userid=#{userid} and userpwd=#{userpwd}
+	</select>
+	<select id="user_info" resultType="userDto" parameterType="String">
+		select * from userTbl
+		where userid=#{userid}
+	</select>
+	<select id="find_id" resultType="userDto" parameterType="userDto">
+		select userid from userTbl
+		where username=#{username} and useremail=#{useremail}
+	</select>
+	<select id="naver_id_check" resultType="userDto" parameterType="userDto">
+		select * from userTbl
+		where naverid=#{naverid}
+	</select>
+	<select id="id_check_count" parameterType="String" resultType="Integer">
+		select count(*) from userTbl
+		where userid = #{userid}	
+	</select>
+	<insert id="insertUser">
+		insert into userTbl (userno, userid, username, userpwd, useremail, userphone, 
+		presentid, userimage, regdate) 
+		values (user_Sq.nextVal, #{userid}, #{username}, #{userpwd}, #{useremail}, #{userphone},
+		#{presentid}, 'avatar.png', sysdate)
+	</insert>
+	<insert id="insert_naver_user" parameterType="userDto">
+		insert into userTbl (userno, userid, username, userphone, 
+		presentid, userimage, protein, regdate, naverid, naverAccessToken) 
+		values (user_Sq.nextVal, #{userid}, #{username}, #{userphone},
+		#{presentid}, 'avatar.png', 0, sysdate, #{naverid}, #{naverAccessToken})
+	</insert>
+	<update id="addInfo_user" parameterType="userDto">
+		update userTbl set birthdate=#{birthDate}, gender=#{gender}, userheight=#{userheight},
+		userweight=#{userweight}, purposeExe=#{purposeExe}, stateExe=#{stateExe}, goalExe=#{goalExe}, modifyDate=sysdate where userid=#{userid}
+	</update>
+	<update id="update_img" parameterType="userDto">
+		update userTbl set userimage=#{userimage}
+		where userid=#{userid}
+	</update>
+	<select id="select_img" parameterType="userDto" resultType="userDto">
+		select userimage from userTbl
+		where userid=#{userid}
+	</select>
+	<update id="editUser" parameterType="userDto">
+		update userTbl set userheight=#{userheight}, userweight=#{userweight}, purposeExe=#{purposeExe}, stateExe=#{stateExe}, goalExe=#{goalExe}, birthdate=#{birthDate}, gender=#{gender} 
+		where userid=#{userid}
+	</update>
+	<delete id="deleteUser">
+		delete from userTbl where userid=#{userid}
+	</delete>
+	<update id="find_pwd" parameterType="userDto">
+		update userTbl set userpwd = #{createPwd} where userid=#{userid} and username=#{username} and useremail=#{useremail}
+	</update>
+</mapper>

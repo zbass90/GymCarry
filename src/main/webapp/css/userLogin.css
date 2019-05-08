@@ -1,0 +1,215 @@
+@charset "UTF-8";
+body{
+	margin:0
+}
+header{
+	background-image:url('/gymcarry/resources/user/userjoin.jpg');
+	width:100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: luminosity; /*여기서 조절*/
+	background-color: #A9A9A9;
+	height: 75%;
+}
+.paper{
+	margin-top:-120px;
+	padding:25px;
+	background-color: white;
+	width:100%;
+	height:520px;
+	border-radius:5px;
+	box-shadow:10px 10px #BDBDBD;
+}
+.paper-top{
+	line-height:13px;
+}
+.paper-top strong{
+	font-size:18px
+}
+.paper-top span{
+	font-size:13px
+}
+.paper-fnt{
+	font-size:20px
+}
+.join-select{
+	margin:50px 0;
+	font:bold;
+	font-size:15px;
+}
+.facebook-ico a{
+	display:block;
+	text-align:center;
+	border-radius:4px;
+	height:40px;
+	background-color:#3b5998;
+	font-stretch:100%;
+	color:#fff;
+	padding-top:13px;
+	font-family:'Jua', sans-serif;
+}
+.facebook-ico img{
+	margin:0 5px 0 0;
+}
+.facebook-ico a:hover{
+	color:#fff;
+	background-blend-mode: luminosity;
+	background-color:#5d719a;
+}
+.kakao-ico{
+	margin-top:10px
+}
+.kakao-ico a{
+	display:block;
+	text-align:center;
+	border-radius:4px;
+	height:40px;
+	background-color:#ffeb00;
+	font-stretch:100%;
+	color:#3c1e1e;
+	padding-top:13px;
+	font-family:'Jua', sans-serif;
+}
+.kakao-ico a:hover{
+	color:inherit;
+	background-blend-mode: luminosity;
+	background-color:#fff367;
+}
+.kakao-ico img{
+	margin:0 5px 0 0;
+}
+.naver-ico{
+	margin-top:10px
+}
+.naver-ico a{
+	display:block;
+	text-align:center;
+	border-radius:4px;
+	height:40px;
+	background-color:#1ec800;
+	font-stretch:100%;
+	color:#fff;
+	padding-top:7px;
+	font-family:'Jua', sans-serif;
+}
+.naver-ico a:hover{
+	color:#fff;
+	background-blend-mode: luminosity; /*여기서 조절*/
+	background-color: #5ce344;
+}
+.naver-ico img{
+	margin:0 5px 0 0;
+}
+.paper-bottom{
+	font-size:15px;
+	text-align:center;
+}
+.paper-bottom-1{
+	margin-top: 30px
+}
+.paper-bottom-2{
+	margin-top: 30px;
+}
+.email-ico{
+	margin-top:30px
+}
+.email-ico a{
+	display:block;
+	text-align:center;
+	border-radius:4px;
+	height:40px;
+	background-color:#890422;
+	font-stretch:100%;
+	color:#fff;
+	padding-top:13px;
+	font-family:'Jua', sans-serif;
+}
+.email-ico a:hover{
+	color:#fff;
+	background-blend-mode: luminosity; /*여기서 조절*/
+	background-color: #89283e;
+	
+}
+.login-ico{
+	text-align:center;
+	border-radius:4px;
+	height:40px;
+	background-color:#890422;
+	font-stretch:100%;
+	color:#fff;
+	padding:5px;
+	font-family:'Jua', sans-serif;
+	margin-left:10px;
+}
+.login-ico:hover {
+	color:#fff;
+	background-color:#89283e;
+	background-blend-mode: luminosity; /*여기서 조절*/
+}
+.right-frm{
+	margin-top:50px;
+	padding:25px;
+}
+.form-input {	
+	margin-bottom: 0px;
+	width: 100%;
+	border: 0 none;
+	border-bottom: 1px solid #ddd;
+	border-radius: 0;
+	background: none;
+	font-size: 15px;
+	font-weight: 400;
+	height: 45px;
+	padding: 12px 0 0 0;
+	-webkit-appearance: none;
+}
+.form-input:focus {
+	outline: 0;
+	box-shadow: none;
+	border-bottom: 3px solid #888;
+}
+.bd-fnt{
+	font-size:14px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.bd-fnt2{
+	font-size:14px;
+	font-weight: bold;
+	color:#888;
+}
+.bd-fnt:hover{
+	font-size:14px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.bd-fnt:visited{
+	font-size:14px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.span-fnt{
+	font-size:12px;
+	color:#888;
+	font-weight: bold;
+}
+.btn-login{
+	background: #89283e;
+	color: #fff;
+	font-size: 14px;
+	border:0 none;
+	height: 40px;
+	border-radius: 4px;
+	font-family: 'Jua', sans-serif;
+	width:100%;
+}
+.normal-fnt{
+	font-size: 13px;
+    font-weight: 400;
+    color: #666;
+}
+.normal-fnt2{
+	font-size: 12px;
+    color: #888;
+}

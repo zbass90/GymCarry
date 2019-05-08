@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--  parameterType="kr.goott.gymcarry.model.dto.CommunityDTO" -->
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+<mapper namespace="community">
+	<insert id="insertCommunity" parameterType="kr.goott.gymcarry.model.dto.CommunityDTO">
+		insert into communitytbl(comno,userid,comimage,comdes,views,likes,replys,regdate) values(comseq.nextval,#{userid},#{comImage},#{comDes},0,0,0,sysdate)
+	</insert>
+	<select id="listCommunity" resultType="kr.goott.gymcarry.model.dto.CommunityDTO">
+		select * from communitytbl order by comno desc
+	</select>
+	<select id="monthlyList" resultType="kr.goott.gymcarry.model.dto.CommunityDTO">
+		<![CDATA[select * from communitytbl where rownum < 13 order by views desc]]>
+	</select>
+	<select id="viewCommunity" resultType="kr.goott.gymcarry.model.dto.CommunityDTO">
+		select * from communitytbl where comno=#{comNo}
+	</select>
+	<update id="editCommunity">
+		update communitytbl set comImage=#{comImage}, comDes=#{comDes} where comNo=#{comNo}
+	</update>
+	<delete id="deleteCommunity">
+		delete communitytbl where comno=#{comNo}
+	</delete>
+	<update id="viewCount">
+		update communitytbl set views=views+1 where comno=#{comno}
+	</update>
+	<update id="replyCount">
+		update communitytbl set replys=replys+1 where comno=#{comno}
+	</update>
+	<update id="likeCount">
+		update communitytbl set likes=likes+1 where comno=#{comno}
+	</update>
+	<update id="replyCountSub">
+		update communitytbl set replys=replys-1 where comno=#{comno}
+	</update>
+	<update id="likeCountSub">
+		update communitytbl set likes=likes-1 where comno=#{comno}
+	</update>
+	<insert id="insertLike">
+		insert into communitylike values(comlikeseq.nextval,#{userid},#{comNo})
+	</insert>
+	<delete id="deleteLike">
+		delete communitylike where comno=#{comNo} and userid=#{userid}
+	</delete>
+	<select id="userComList" resultType="kr.goott.gymcarry.model.dto.CommunityDTO">
+		select * from communitytbl where userid=#{userid}
+	</select>	
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
